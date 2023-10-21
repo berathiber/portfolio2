@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Website 2023</title>
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;900&display=swap");
+      * {
+        /* background-color: aquamarine; */
+        font-family: Poppins, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: #081b29;
+        color: #ededed;
+      }
+      header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 20px 10%;
+        background: transparent;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 100;
+      }
+      .logo {
+        font-size: 34px;
+        color: #ededed;
+        text-decoration: none;
+        font-weight: 700;
+      }
+      .logo:hover {
+        color: #00abf0;
+      }
+      .navbar a {
+        font-size: 23px;
+        color: #ededed;
+        text-decoration: none;
+        font-weight: 550;
+        margin-left: 35px;
+        transition: 0.3s;
+      }
+      .navbar a:hover,
+      .navbar a.active {
+        color: #00abf0;
+      }
+      a.active:hover {
+        color: #ededed;
+      }
+      .home {
+        display: flex;
+        height: 100vh;
+        align-items: center;
+        background: url(/1116.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+        padding: 0px 10%;
+      }
+      .home-content {
+        /* background-color: aquamarine; */
+        max-width: 610px;
+        /* text-transform: uppercase; */
+      }
+      .home-content h1 {
+        font-size: 56px;
+        font-weight: 700;
+      }
+      .home-content h3 {
+        font-size: 32px;
+        font-weight: 700;
+        color: #00abf0;
+      }
+      .home-content p {
+        font-size: 19px;
+        margin: 20px 0 40px;
+        line-height: 1.4;
+        /* padding: 10px; */
+      }
+      .btn-box {
+        /* background-color: yellowgreen; */
+        display: flex;
+        justify-content: space-between;
+        width: 345px;
+        height: 50px;
+        margin-top: 15px;
+      }
+      .btn-box a {
+        position: relative;
+        width: 150px;
+        height: 100%;
+        background-color: #00abf0;
+        border: 2px solid #00abf0;
+        border-radius: 8px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 19px;
+        color: #081b29;
+        text-decoration: none;
+        font-weight: 600;
+        letter-spacing: 1px;
+        z-index: 1;
+        overflow: hidden;
+      }
+      .btn-box a:hover {
+      }
+      .btn-box a:nth-child(2) {
+        background: transparent;
+        color: #00abf0;
+      }
+      .btn-box a::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0%;
+        height: 100%;
+        background: #081b29;
+        z-index: -1;
+        transition: 0.8s;
+      }
+      .btn-box a:hover::before {
+        width: 100%;
+      }
+      .btn-box a:nth-child(2)::before {
+        background: #00abf0;
+      }
+      .btn-box a:nth-child(2):hover {
+        color: #081b29;
+      }
+      .btn-box a:nth-child(1):hover {
+        color: #00abf0;
+      }
+      .home-sci {
+        position: absolute;
+        /* background-color: red; */
+        bottom: 40px;
+        width: 240px;
+        display: flex;
+        justify-content: space-around;
+      }
+      .home-sci a {
+        position: relative;
+        display: inline-flex;
+        width: 40px;
+        height: 40px;
+        background: transparent;
+        border: 3px solid #00abf0;
+        border-radius: 50%;
+        align-items: center;
+        justify-content: center;
+        font-size: 26px;
+        color: #00abf0;
+        text-decoration: none;
+        overflow: hidden;
+        z-index: 1;
+      }
+      .home-sci a::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0%;
+        height: 100%;
+        background: #00abf0;
+        z-index: -1;
+        transition: 0.8s;
+      }
+      .home-sci a:hover::before {
+        width: 100%;
+      }
+      .home-sci a:hover {
+        color: #081b29;
+      }
+      h1 {
+        /* color: #00abf0; */
+      }
+      .home-imgHover {
+        position: absolute;
+        top: 0;
+        right: 570px;
+        width: 300px;
+        height: 100%;
+        background: transparent;
+        /* border: 2px solid red; */
+        transition: 3s;
+      }
+      .home-imgHover:hover {
+        background-color: #000000;
+        opacity: 0.8;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <a href="#" class="logo">Berat Hiber</a>
+      <nav class="navbar">
+        <a href="#" class="active">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Portfolio</a>
+        <a href="#">Contact</a>
+      </nav>
+    </header>
+
+    <section class="home">
+      <div class="home-content">
+        <h1>Hi, I'm Berat Hiber</h1>
+        <h3>Front-end Developer</h3>
+        <p>
+          A front-end web developer is responsible for implementing visual
+          elements that users see and interact with in a web application. They
+          are usually supported by back-end web developers, who are responsible
+          for server-side application logic and integration of the work
+          front-end developers do.
+        </p>
+        <div class="btn-box">
+          <a href="#"> Hire Me</a>
+          <a href="#">Contact Me</a>
+        </div>
+      </div>
+      <div class="home-sci">
+        <a href="#"><i class="bx bxl-facebook"></i></a>
+        <a href="#"><i class="bx bxl-twitter"></i></a>
+        <a href="#"><i class="bx bxl-instagram"></i></a>
+        <a href="#"><i class="bx bxl-linkedin"></i></a>
+      </div>
+      <span class="home-imgHover"></span>
+    </section>
+  </body>
+</html>
